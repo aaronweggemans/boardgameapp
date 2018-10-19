@@ -2,15 +2,42 @@
 /**
  * GET routes
  */
-$router->get('your_unique_id/P1_OOAPP_Opdracht', 'controllers/index.php');
-$router->get('your_unique_id/P1_OOAPP_Opdracht/home', 'controllers/index.php');
-$router->get('your_unique_id/P1_OOAPP_Opdracht/players', 'controllers/players.php');
-$router->get('your_unique_id/P1_OOAPP_Opdracht/games', 'controllers/games.php');
-$router->get('your_unique_id/P1_OOAPP_Opdracht/users', 'controllers/users.php');
-$router->get('your_unique_id/P1_OOAPP_Opdracht/battles', 'controllers/battles.php');
-$router->get('your_unique_id/P1_OOAPP_Opdracht/excercise', 'controllers/excercise.php');
 
-/**
- * POST routes
- */
-$router->post('your_unique_id/P1_OOAPP_Opdracht/add_player', 'controllers/add_player.php');
+if($_SESSION['login'])
+{
+    //GET
+    $router->get('home', 'controllers/index.php');
+    $router->get('players', 'controllers/players.php');
+    $router->get('games', 'controllers/games.php');
+    $router->get('users', 'controllers/users.php');
+    $router->get('battles', 'controllers/battles.php');
+    $router->get('excercise', 'controllers/excercise.php');
+    $router->get('logout', 'controllers/logout.php');
+
+    //VERWIJDERIE
+    $router->post('del_user', 'controllers/post/del_user.php');
+    $router->post('del_game', 'controllers/post/del_game.php');
+
+    //POST
+    $router->post('add_player', 'controllers/post/add_player.php');
+    $router->post('add_user', 'controllers/post/add_user.php');
+    $router->post('del_game', 'controllers/post/del_game.php');
+    $router->post('add_game', 'controllers/post/add_game.php');
+    $router->post('add_battle', 'controllers/post/add_battle.php');
+
+    //BUILD
+    $router->get('createUser', 'controllers/createUser.php');
+    $router->get('creategame', 'controllers/createGame.php');
+    $router->get('addBattle', 'controllers/createBattle.php');
+
+    //SENDING MAIL
+    $router->post('send_mail', 'controllers/post/send_mail.php');
+}
+else {
+    //GET
+    $router->get('', 'controllers/login.php');
+    $router->get('login', 'controllers/login.php');
+
+    //POST
+    $router->post('login', 'controllers/post/login.php');
+}

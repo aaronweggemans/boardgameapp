@@ -1,10 +1,184 @@
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
+body {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/A_Game_Of_Thrones_board_game_detail.jpg/1200px-A_Game_Of_Thrones_board_game_detail.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.jumbotron-fluid {
+.container {
+    border-radius: 1%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+nav {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    display: none;
+    float: left;
+    height: 100%;
+    line-height: 70px;
+}
+
+nav .logo h2 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+nav ul {
+    float: right;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    position: relative;
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+nav ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+nav ul li a:hover {
+    color: #262626;
+}
+
+nav ul li a:hover:before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.section1 {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
     background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/A_Game_Of_Thrones_board_game_detail.jpg/1200px-A_Game_Of_Thrones_board_game_detail.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.sectionlogin {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: url("https://professional.fitnessalsmedicijn.be/wp-content/uploads/2017/09/bg-login.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.section2 {
+    padding: 100px;
+}
+
+.nopa {
+    margin: 0;
+    padding: 0;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+    padding-top: 20%;
+}
+
+.col-centered .welcome {
+    font-family: "American Typewriter";
+    letter-spacing: 4px;
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.col-centered .small {
+    font-family: "American Typewriter";
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.col-centered .welcomeLogin {
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.col-centered .smallLogin {
+    font-family: sans-serif;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+/*Fade effect*/
+
+.fadeIn {
+    display: none;
+}
+
+.home {
+    display: none;
+}
+
+.games {
+    display: none;
+}
+
+.users {
+    display: none;
+}
+
+.players {
+    display: none;
+}
+
+.battles {
+    display: none;
+}
+
+.loguit {
+    display: none;
+}
+
+.welcomeLogin{
+    display: none;
+}
+
+.smallLogin{
+    display: none;
 }

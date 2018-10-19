@@ -4,66 +4,17 @@
  * phpoop
  */
 ?>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="home">AvdL</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <?php if($current == 'home') : ?>
-                <li class="nav-item active">
-                    <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-                </li>
-            <?php else :?>
-                <li class="nav-item ">
-                    <a class="nav-link" href="home">Home </a>
-                </li>
-            <?php endif; ?>
-            <?php if($current == 'games') : ?>
-                <li class="nav-item active">
-                    <a class="nav-link" href="games">Games <span class="sr-only">(current)</span></a>
-                </li>
-            <?php else :?>
-                <li class="nav-item ">
-                    <a class="nav-link" href="games">Games </a>
-                </li>
-            <?php endif; ?>
-            <?php if($current == 'users') : ?>
-                <li class="nav-item active">
-                    <a class="nav-link" href="users">Users <span class="sr-only">(current)</span></a>
-                </li>
-            <?php else :?>
-                <li class="nav-item ">
-                    <a class="nav-link" href="users">Users </a>
-                </li>
-            <?php endif; ?>
-            <?php if($current == 'players') : ?>
-                <li class="nav-item active">
-                    <a class="nav-link" href="players">Players <span class="sr-only">(current)</span></a>
-                </li>
-            <?php else :?>
-                <li class="nav-item ">
-                    <a class="nav-link" href="players">Players </a>
-                </li>
-            <?php endif; ?>
-            <?php if($current == 'battles') : ?>
-                <li class="nav-item active">
-                    <a class="nav-link" href="battles">Battles <span class="sr-only">(current)</span></a>
-                </li>
-            <?php else :?>
-                <li class="nav-item ">
-                    <a class="nav-link" href="battles">Battles </a>
-                </li>
-            <?php endif; ?>
-            <li class="nav-item ">
-                <a class="nav-link" href="excercise">Exercise </a>
-            </li>
-
-        </ul>
-
+<nav>
+    <div class="logo">
+        <h2>Gamesbord App</h2>
     </div>
+    <ul>
+        <li class="home"><a href="home">Home</a></li>
+        <li class="games"><a href="games">Games</a></li>
+        <li class="users"><a href="users">Users</a></li>
+        <li class="players"><a href="players">Players</a></li>
+        <li class="battles"><a href="battles">Battles</a></li>
+<!--        <li><a href="excercise">Excercise</a></li>-->
+        <li class="loguit"><a href="logout">Loguit</a></li>
+    </ul>
 </nav>
-

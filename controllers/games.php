@@ -4,5 +4,5 @@
  * phpoop
  */
 
-
+$games = $app['database']->selectAll("games");
 require 'views/games.view.php';

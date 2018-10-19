@@ -5,9 +5,12 @@
  * @bootstrap.php file to initialize database
  * @Request::uri get the uri
  * */
+
+require "vendor/autoload.php";
+
+$url = 'localhost:4444';
 $query = require 'core/bootstrap.php';
 $current = Request::uri();
-
 
 /**
  * Where are you in your page and where do you go with the
@@ -17,6 +20,5 @@ $current = Request::uri();
  * @Request::uri get the uri
  * @Request::method POST or GET?
  */
-require Router::load('routes.php') //chaining!!
-    ->direct(Request::uri(), Request::method());
+require Router::load('routes.php')->direct(Request::uri(), Request::method());
 

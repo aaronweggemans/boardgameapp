@@ -4,4 +4,7 @@
  * phpoop
  */
 
+$table = "battles";
+$games = $app['database']->selectAll($table);
+
 require 'views/battles.view.php';
