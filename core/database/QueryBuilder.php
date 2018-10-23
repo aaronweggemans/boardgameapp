@@ -23,12 +23,11 @@ class QueryBuilder
         return $statement->fetchAll();
     }
 
-    public function selectFrom($table, $finder, $condition, $where)
+    public function selectFrom($finder, $table, $condition, $where)
     {
         $statement = $this->pdo->prepare("SELECT {$finder} FROM {$table} WHERE {$condition} = {$where}");
         $statement->execute();
-
-        return $statement->fetchAll();
+        return $statement->fetch();
     }
 
     public function checkInto($table, $conditions, $values)
@@ -46,7 +45,6 @@ class QueryBuilder
 
     public function insertInto($table, $conditions, $values)
     {
-        //ZOEK OP BIND PARAMS
         $string_conditions = implode(',', array_map(function ($item) {
             return sprintf("`%s`", $item);
         }, $conditions));

@@ -13,10 +13,18 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <p>Gameid</p>
+                    <p>Welk spel?</p>
                 </div>
                 <div class="col-md-8">
-                    <input type="number" class="form-control" name="gameid">
+                    <select name="gameid" id="" class="form-control">
+                        <?php
+                            foreach ($games as $game)
+                            {
+                                echo "<option value='$game[0]'>$game[1]</option>";
+                            }
+                        ?>
+                    </select>
+<!--                    <input type="number" class="form-control" name="gameid">-->
                 </div>
             </div>
             <div class="row">
@@ -57,7 +65,15 @@
                     <p>Gewonnen door?</p>
                 </div>
                 <div class="col-md-8">
-                    <input type="number" class="form-control" name="wonby">
+                    <select name="wonby" id="" class="form-control">
+                        <?php
+                            foreach($users as $user)
+                            {
+                                echo "<option value='$user[0]'>$user[1]</option>";
+                            }
+                        ?>
+                    </select>
+<!--                    <input type="number" class="form-control" name="wonby">-->
                 </div>
             </div>
             <div class="row">

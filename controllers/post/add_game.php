@@ -20,7 +20,7 @@ if ($_POST) {
         $_POST['name'],
         $_POST['nop'],
         $_POST['dor'],
-        $_POST['publisherid'],
+        12,
         $_POST['duration'],
         $_POST['description'],
     ];

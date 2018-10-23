@@ -6,26 +6,33 @@
  * Time: 12:58
  */
 
-$table = "battles";
+if($_POST)
+{
+    $table = "battles";
 
-$conditions = [
-    'dtplayed',
-    'gameid',
-    'playerid01',
-    'playerid02',
-    'wonby',
-    'score'
-];
+    $conditions = [
+        'dtplayed',
+        'gameid',
+        'playerid01',
+        'playerid02',
+        'wonby',
+        'score'
+    ];
 
-$values = [
-    $_POST['dtplayed'],
-    $_POST['gameid'],
-    $_POST['playerid01'],
-    $_POST['playerid02'],
-    $_POST['wonby'],
-    $_POST['score'],
-];
+    $values = [
+        $_POST['dtplayed'],
+        $_POST['gameid'],
+        $_POST['playerid01'],
+        $_POST['playerid02'],
+        $_POST['wonby'],
+        $_POST['score']
+    ];
 
-$app['database']->insertInto($table, $conditions, $table);
-
-die(var_dump("asdf"));
+    try {
+        $app['database']->insertInto($table, $conditions, $values);
+        header("Location: battles");
+    } catch (Exception $e)
+    {
+        header("Location: battles");
+    }
+}

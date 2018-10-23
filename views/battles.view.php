@@ -12,23 +12,76 @@
                     <th>Winnaar</th>
                     <th>Spel</th>
                     <th>Datum</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                     foreach($games as $game)
                     {
-                        var_dump($app['database']->selectFrom("name", "games", "id", $game[2]));
+//                        var_dump($app['database']->selectFrom("name", "games", "id", $game[2]));
+                        echo "<tr>";
+                            echo "<td>";
+                                $builder = $app['database']->selectFrom('fname', 'users', 'id', $game[3]);
+                                if(empty($builder[0]))
+                                {
+                                    echo "Verwijderde Gebruiker!";
+                                }
+                                else
+                                {
+                                    echo $builder[0];
+                                }
+                            echo "</td>";
+                            echo "<td>";
+                                echo "VS";
+                            echo "</td>";
+                            echo "<td>";
+                                $builder = $app['database']->selectFrom('fname', 'users', 'id', $game[4]);
+                                if(empty($builder[0]))
+                                {
+                                    echo "<p class='text-danger'>Verwijderde Gebruiker!</p>";
+                                }
+                                else
+                                {
+                                    echo $builder[0];
+                                }
+                            echo "</td>";
+                            echo "<td>";
+                                $builder = $app['database']->selectFrom('fname', 'users', 'id', $game[7]);
+                                if(empty($builder[0]))
+                                {
+                                    echo "<p class='text-danger'>Verwijderde Gebruiker!</p>";
+                                }
+                                else
+                                {
+                                    echo "<b>" . $builder[0] . "</b>";
+                                }
+                            echo "</td>";
+                            echo "<td>";
+                                $builder = $app['database']->selectFrom('name', 'games', 'id', $game[2]);
+                                if(empty($builder[0]))
+                                {
+                                    echo "<p class='text-danger'>Verwijderde game!</p>";
+                                }
+                                else
+                                {
+                                    echo $builder[0];
+                                }
+                            echo "</td>";
+                            echo "<td>";
+                                echo $game[1];
+                            echo "</td>";
+                            echo "<td>";
+                                echo "
+                                    <form action='del_battle' method='post'>
+                                        <input type='hidden' name='id' value='$game[0]'>
+                                        <input type='submit' class='btn btn-danger' value='Verwijder Battle'>
+                                    </form>
+                                ";
+                            echo "</td>";
+                        echo "</tr>";
                     }
                 ?>
-                <tr>
-                    <td>Aaron Weggemans</td>
-                    <td>VS.</td>
-                    <td>Rebien Hussein</td>
-                    <td>3 - 5</td>
-                    <td>Rebien Hussein</td>
-                    <td>Ganzenbord</td>
-                </tr>
                 </tbody>
             </table>
             <div class="row">

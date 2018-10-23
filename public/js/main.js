@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('.logo').slideDown(1000);
     $('.home').slideDown(400);
     $('.games').slideDown(600);

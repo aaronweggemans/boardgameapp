@@ -182,3 +182,7 @@ nav ul li a:hover:before {
 .smallLogin{
     display: none;
 }
+
+.points {
+    display: none;
+}

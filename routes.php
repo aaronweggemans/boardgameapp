@@ -17,6 +17,7 @@ if($_SESSION['login'])
     //VERWIJDERIE
     $router->post('del_user', 'controllers/post/del_user.php');
     $router->post('del_game', 'controllers/post/del_game.php');
+    $router->post('del_battle', 'controllers/post/del_battle.php');
 
     //POST
     $router->post('add_player', 'controllers/post/add_player.php');

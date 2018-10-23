@@ -6,8 +6,8 @@
  * Time: 12:59
  */
 
-$table = "users";
+$users = $app['database']->selectAll("users");
 
-$users = $app['database']->selectAll($table);
+$games = $app['database']->selectAll("games");
 
 require "views/addBattle.view.php";

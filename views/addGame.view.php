@@ -21,18 +21,10 @@
             </div>
             <div class="row mb-2">
                 <div class="col-md-4">
-                    <p>Datum van Release</p>
+                    <p>Datum van Release <small>(In jaren)</small></p>
                 </div>
                 <div class="col-md-8">
-                    <input type="number" class="form-control" name="dor">
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-md-4">
-                    <p>Publisher ID</p>
-                </div>
-                <div class="col-md-8">
-                    <input type="number" class="form-control" name="publisherid">
+                    <input type="number" maxlength="4" class="form-control" name="dor">
                 </div>
             </div>
             <div class="row mb-2">
