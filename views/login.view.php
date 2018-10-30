@@ -26,7 +26,7 @@
                                 Email adres:
                             </div>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="email">
+                                <input type="text" class="form-control" name="email" placeholder="stephanhoeksema@hotmail.nl">
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -34,7 +34,7 @@
                                 Wachtwoord:
                             </div>
                             <div class="col-md-8">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" placeholder="heelgeheim123">
                             </div>
                         </div>
                         <div class="row mb-2">
