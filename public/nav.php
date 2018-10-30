@@ -4,6 +4,7 @@
  * phpoop
  */
 ?>
+<!--Navigation bar-->
 <nav>
     <div class="logo">
         <h2>Gamesbord App</h2>

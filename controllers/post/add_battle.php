@@ -6,10 +6,13 @@
  * Time: 12:58
  */
 
+//If there is pressed on a post button
 if($_POST)
 {
+    //makes variable for the table
     $table = "battles";
 
+    //creates the database table names in an array
     $conditions = [
         'dtplayed',
         'gameid',
@@ -19,6 +22,7 @@ if($_POST)
         'score'
     ];
 
+    //retrieve posted variables from the fields
     $values = [
         $_POST['dtplayed'],
         $_POST['gameid'],
@@ -28,11 +32,18 @@ if($_POST)
         $_POST['score']
     ];
 
+    //try to do the next
     try {
+        //insert the values in table, with table names, and values
         $app['database']->insertInto($table, $conditions, $values);
+
+        //redirect to battles
         header("Location: battles");
+
+    // if this didnt work than this
     } catch (Exception $e)
     {
+        //redirect to battles
         header("Location: battles");
     }
 }

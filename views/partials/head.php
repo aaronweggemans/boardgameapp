@@ -1,3 +1,4 @@
+<!--Requires the head in view-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

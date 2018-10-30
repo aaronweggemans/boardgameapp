@@ -6,4 +6,5 @@
  * Time: 21:14
  */
 
+//goes to the login view
 require "views/login.view.php";

@@ -4,4 +4,5 @@
  * phpoop
  */
 
+//shows the player view
 require 'views/players.view.php';

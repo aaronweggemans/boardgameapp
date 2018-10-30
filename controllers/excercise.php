@@ -8,4 +8,6 @@
 /**
  * @internal view index.php
  */
+
+//goes to the views excercise view
 require 'views/excercise.view.php';

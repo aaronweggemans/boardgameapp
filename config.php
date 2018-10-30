@@ -7,7 +7,7 @@
  * @database - configuration for PDO()
  */
 
-
+//Sets the next data in connection and makes pdo connection
 return [
     'database' => [
         'name' => 'gameapp',

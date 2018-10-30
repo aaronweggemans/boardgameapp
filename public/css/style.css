@@ -1,3 +1,5 @@
+/* Sorry maar dit ga ik niet uitleggen */
+
 body {
     background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/A_Game_Of_Thrones_board_game_detail.jpg/1200px-A_Game_Of_Thrones_board_game_detail.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -98,7 +100,7 @@ nav ul li a:hover:before {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background: url("https://professional.fitnessalsmedicijn.be/wp-content/uploads/2017/09/bg-login.jpg") no-repeat center center;
+    background: url("https://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg") no-repeat center center;
     background-size: cover;
 }
 

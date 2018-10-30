@@ -3,6 +3,7 @@
  * GET routes
  */
 
+//If session Login exists, your able to go the the next routes
 if($_SESSION['login'])
 {
     //GET
@@ -35,6 +36,8 @@ if($_SESSION['login'])
     $router->post('send_mail', 'controllers/post/send_mail.php');
 }
 else {
+    //else if the session not exists your able to route to this
+
     //GET
     $router->get('', 'controllers/login.php');
     $router->get('login', 'controllers/login.php');

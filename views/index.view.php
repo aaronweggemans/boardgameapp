@@ -1,3 +1,4 @@
+<!--Requires head -->
 <?php require 'partials/head.php'; ?>
     <div class="section1">
         <div class="row">
@@ -8,3 +9,4 @@
         </div>
     </div>
 <?php require 'partials/foot.php'; ?>
+<!--Requires foot -->

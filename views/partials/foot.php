@@ -1,4 +1,5 @@
 <!-- JavaScript / Popper.js / jQuery all for Bootstrap -->
+<!--Require javascript and main javascript -->
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

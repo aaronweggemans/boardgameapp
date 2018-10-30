@@ -1,3 +1,4 @@
+<!--Requires head -->
 <?php require "partials/head.php" ?>
     <section class="section2">
         <div class="container pt-4 pb-4 fadeIn">
@@ -37,3 +38,4 @@
         </div>
     </section>
 <?php require "partials/foot.php" ?>
+<!--Requires foot -->

@@ -1,4 +1,6 @@
+//If document is ready loading, start function
 $(document).ready(function () {
+    //slide down logo with 1000 miliseconds
     $('.logo').slideDown(1000);
     $('.home').slideDown(400);
     $('.games').slideDown(600);

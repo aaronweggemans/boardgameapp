@@ -10,4 +10,5 @@
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+//goes to login in querybuilders with the next values
 $app['database']->login($email, $password);

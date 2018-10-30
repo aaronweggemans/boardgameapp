@@ -6,6 +6,9 @@
  * Time: 13:05
  */
 
+//destroys the session
 session_start();
 session_destroy();
+
+//redirect to login
 header("Location: login");
